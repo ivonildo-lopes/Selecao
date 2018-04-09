@@ -1,0 +1,40 @@
+
+<div class="box">
+  <h3>Cadastro - Usuarios</h3>
+
+  <div class="container">
+
+    <div class="col-md-5">
+      <input type="text" class="form-control" placeholder="* Nome" name="usuario.nome" [(ngModel)]="usuario.nome">
+    </div>
+
+    <div class="col-md-5">
+      <input type="text" class="form-control" placeholder="* Email" name="usuario.email" [(ngModel)]="usuario.email">
+    </div>
+
+    <div class="col-md-2">
+      <input type="number" class="form-control" placeholder="Idade" name="usuario.idade" [(ngModel)]="usuario.idade">
+    </div>
+
+    <div class="col-md-5">
+      <input type="text" class="form-control" placeholder="CPF" name="usuario.cpf" [(ngModel)]="usuario.cpf">
+    </div>
+
+    <div class="col-md-5">
+      <input type="text" class="form-control" placeholder="* Site" name="usuario.site" [(ngModel)]="usuario.site">
+    </div>
+
+    <div class="col-md-5">
+      <app-dropdown inputName="sexo" inputID="sexo" label="Sexo" [listaConteudo]="listaSexo" (bind)="usuario.sexo = $event"></app-dropdown>
+    </div>
+
+    <div class="col-md-5">
+      <input type="text" class="form-control" placeholder="* Profissão" name="usuario.profissao" [(ngModel)]="usuario.profissao">
+    </div>
+
+    
+  </div>
+  <button class="btn btn-danger" id="btn"  (click)="cancelar()"> Cancelar</button>
+  <button class="btn btn-primary" id="btn"  (click)="salvar()"> salvar</button>
+
+</div>

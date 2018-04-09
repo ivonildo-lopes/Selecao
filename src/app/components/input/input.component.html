@@ -1,0 +1,7 @@
+<div class="input-group">
+  <div *ngIf="label !== undefined" class="input-group-addon">
+    <label for="{{ inputID }}">{{ label }}</label>
+  </div>
+  <input (input)="onEvent($event)" name="{{ inputName }}" id="{{ inputID }}" type="{{ type }}" class="{{ inputClass }}" placeholder="{{ placeholder }}"
+    value="{{ value }}">
+</div>

@@ -1,0 +1,12 @@
+.input-group{
+    width: 100%;
+}
+
+.input-group-addon{
+    cursor: default ;
+    line-height: 0;
+}
+
+input[type="text"][disabled] {
+    cursor: default ;
+ }

@@ -1,0 +1,32 @@
+<div class="box">
+    <h3>Cadastro - Local</h3>
+
+    <div class="container">
+
+        <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="* Nome" name="local.nome" [(ngModel)]="local.nome">
+        </div>
+
+        <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="* Pais" name="local.pais" [(ngModel)]="local.pais">
+        </div>
+
+        <div class="col-md-2">
+            <input type="text" class="form-control" placeholder="Estado" name="local.estado" [(ngModel)]="local.estado">
+        </div>
+
+        <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="cidade" name="local.cidade" [(ngModel)]="local.cidade">
+        </div>
+
+        <div class="col-md-5">
+            <input type="text" class="form-control" placeholder="* telefone" name="local.telefone" [(ngModel)]="local.telefone">
+        </div>
+
+
+
+    </div>
+    <button class="btn btn-danger" id="btn" (click)="cancelar()"> Cancelar</button>
+    <button class="btn btn-primary" id="btn" (click)="salvar()"> salvar</button>
+
+</div>

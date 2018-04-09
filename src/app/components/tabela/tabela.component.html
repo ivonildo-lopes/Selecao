@@ -1,0 +1,51 @@
+<span *ngIf="listaConteudo.length > 0">
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th *ngFor="let item of listaCabecalho"> {{ item }}</th>
+        <th class="button{{ !buttons.editar ? ' hide': '' }}"></th>
+        <th class="button{{ !buttons.excluir ? ' hide': '' }}"></th>
+        <th class="button{{ !buttons.adicionar ? ' hide': '' }}"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let objeto of listaConteudo">
+        <td *ngFor="let value of generateArray(objeto)" (click)="onLinhaTable(objeto)">{{ value }}</td>
+        <td class="button{{ !buttons.editar ? ' hide': '' }}">
+          <button class="btn btn-xs btn-warning" (click)="onEdit(objeto)">Editar</button>
+        </td>
+        <td class="button{{ !buttons.excluir ? ' hide': '' }}">
+          <button class="btn btn-xs btn-danger" (click)="onDelete(objeto.id)">Excluir</button>
+        </td>
+        <td class="button{{ !buttons.adicionar ? ' hide': '' }}">
+          <button class="btn btn-xs btn-success" (click)="onAdicionar(objeto)">Adicionar</button>
+        </td>
+      </tr>
+      <ng-content></ng-content>
+    </tbody>
+  </table>
+  <div class="row"> 
+  <div class="col-md-2"> Página {{ currentPage }} de {{ total }}</div>
+  <div class="col-md-10 ">
+    <ul class="pagination pull-right">
+      <li class="paginate_button previous {{ currentPage > 1 ? '' : 'disabled' }}" id="example2_previous">
+        <a (click)="onChangePage(1)">
+          <<</a>
+      </li>
+      <li class="paginate_button previous {{ currentPage > 1 ? '' : 'disabled' }}" id="example2_previous">
+        <a (click)="onChangePage(this.currentPage-1)">
+          <</a>
+      </li>
+      <li *ngFor="let number of count" class="paginate_button {{ number === currentPage  ? 'active' : '' }}">
+        <a (click)="onChangePage(number)">{{ number }}</a>
+      </li>
+      <li class="paginate_button next {{ currentPage < this.total ? '' : 'disabled' }}" id="example2_next">
+        <a (click)="onChangePage(this.currentPage+1)">></a>
+      </li>
+      <li class="paginate_button next {{ currentPage < this.total ? '' : 'disabled' }}" id="example2_next">
+        <a (click)="onChangePage(this.total)">>></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</span>

@@ -1,0 +1,46 @@
+td:last-child, th:last-child{
+    text-align: right;
+    width: 8em;
+}
+
+td:first-child, th:first-child{
+    width: 12em;
+}
+
+button{
+    float: right;
+}
+
+.box-footer .btn{
+    margin-top: 15px !important;
+}
+
+table{
+    margin-bottom: 15px !important;
+}
+.box{
+    margin-bottom: 0 !important;
+}
+
+th{
+    background-color:rgba(209, 212, 214, 0.8) !important;
+    color: white;
+    border-color: rgba(210, 213, 214, 0.8) !important;
+}
+
+td{
+    font-size: 12px;
+    border-bottom-color: rgba(211, 217, 221, 0.8) !important;
+}
+
+.input-group{
+    margin-bottom: 5px;
+}
+
+.hide{
+    display: none;
+}
+
+.simple-notification .sn-content {
+    font-size: small !important; 
+}

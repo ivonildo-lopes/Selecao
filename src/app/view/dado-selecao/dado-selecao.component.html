@@ -1,0 +1,37 @@
+
+<div class="col-md-12">
+    <h3>Dados da seleção</h3>
+  </div>
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-2">
+        <label> Periodo Inicial</label>
+      </div>
+
+      <div class="col-md-2">
+        <label> Periodo Final</label>
+      </div>
+
+      <div class="col-md-8">
+        <label> Realizador</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2">
+        {{selecao.periodoInicial | date : 'dd/MM/yyyy'}}
+      </div>
+
+      <div class="col-md-2">
+        {{selecao.periodoFinal | date : 'dd/MM/yyyy'}}
+      </div>
+
+      <div class="col-md-8">
+        {{selecao.realizador}}
+      </div>
+
+    </div>
+
+  </div>

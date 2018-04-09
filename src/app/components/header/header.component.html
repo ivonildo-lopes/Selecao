@@ -1,0 +1,24 @@
+<header class="main-header">
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="menu">
+    <div class="container">
+      <div class="navbar-header">
+        <img class="hapvida-logo" src="assets/seas.jpeg" alt="Hapvida">
+      </div>
+      <div id="navbar-text" class="navbar-collapse collapse">
+        <a href="./" class="navbar-brand">
+          <b>{{ title }}</b>
+          <small>
+            <br> {{ info }} </small>
+        </a>
+
+        <ul class="nav navbar-nav">
+          <li *ngFor="let link of links" class="{{ link.ativo ? 'active' : '' }}">
+            <a href="{{ link.href }}" (click)="onClick(link)">
+              <i class="{{ link.icon !== null ? 'fa fa-'+ link.icon : ''}}"></i> {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,11 @@
+<div class="input-group">
+  <div class="input-group-addon">
+    <label for="{{ inputID }}">{{ label }}</label>
+  </div>
+  <select class="form-control" name="{{ inputName }}" id="{{ inputID }}" (change)="onEvent($event)">
+    <option value="" selected="true">Selecione uma opção</option>
+    <option *ngFor="let entidade of listaConteudo" [value]="entidade.id">
+      {{ entidade.descricao }}
+    </option>
+  </select>
+</div>

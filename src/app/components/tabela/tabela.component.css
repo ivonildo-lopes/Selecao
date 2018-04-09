@@ -1,0 +1,11 @@
+.button{
+    width: 6em;
+}
+
+.pagination>li {
+    cursor: pointer;
+}
+
+.pagination{
+    margin-top: 0px !important;
+}

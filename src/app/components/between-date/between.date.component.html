@@ -1,0 +1,12 @@
+<div class="input-group">
+  <div *ngIf="label !== undefined" class="input-group-addon">
+    <label for="{{ idFrom }}">{{ label }}</label>
+  </div>
+  <input (input)="onEventFrom($event)" id="{{ idFrom }}" name="{{ nameFrom }}" type="date" class="form-control" placeholder="{{ placeholderFrom }}"
+    value="{{ valueFrom }}">
+  <div class="input-group-addon">
+    <label for="{{ idTo }}">à</label>
+  </div>
+  <input (input)="onEventTo($event)" id="{{ idTo }}" name="{{ nameTo }}" type="date" class="form-control" placeholder="{{ placeholderTo }}"
+    value="{{ valueTo }}">
+</div>

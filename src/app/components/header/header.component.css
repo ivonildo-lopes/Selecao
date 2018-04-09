@@ -1,0 +1,12 @@
+nav {
+    background-color:rgba(20, 90, 11, 0.8) !important;
+}
+.hapvida-logo{
+    margin: 0.5em;
+    max-height: 2.5em;
+    /*display: none;*/
+}
+.navbar-brand{
+    line-height: 16px;
+    margin-top: -0.3em;
+}

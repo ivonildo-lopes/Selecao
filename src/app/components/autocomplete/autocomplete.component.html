@@ -1,0 +1,11 @@
+<div class="input-group">
+  <div *ngIf="label !== undefined" class="input-group-addon">
+    <label for="{{ inputID }}">{{ label }}</label>
+  </div>
+  <input value="{{value}}" type="text" id="{{ inputID }}" name="{{ inputName }}" class="form-control" [attr.list]="'list'+inputID" (input)="onEvent($event)" placeholder="{{ listaConteudo.length === 0 ? 'Sem registros' : inputPlaceHolder }}" disabled="{{ listaConteudo.length === 0 ? 'disabled' : '' }}">
+  <datalist id="{{ 'list' + inputID }}">
+    <option *ngFor="let entidade of listaConteudo">
+      {{entidade.id}} {{ separador }} {{entidade.nome}}
+    </option>
+  </datalist>
+</div>

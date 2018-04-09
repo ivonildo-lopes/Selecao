@@ -1,0 +1,7 @@
+<div class="box">
+    <h3>Lista de Locais
+        <button class="btn-success" (click)="novo()">Novo</button>
+    </h3>
+    <app-tabela [pages]="0" [listaCabecalho]="cabecalho" [listaConteudo]="locais" (edit)="onEdit($event)" (delete)="onDelete($event)"
+        (linhaTable)="onLinhaTable($event)" [buttons]="buttonsCadastro"></app-tabela>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+  <section class="content">
+    <div class="nav-tabs-custom">
+      <ul class="nav nav-tabs">
+        <li *ngFor="let aba of abas" class="{{ aba.ativo ? 'active' : '' }}">
+          <a href="#{{aba?.titulo}}" data-toggle="tab" aria-expanded="true">{{ aba?.titulo }}</a>
+        </li>
+      </ul>
+      <ng-content></ng-content>
+    </div>
+  </section>
+</div>

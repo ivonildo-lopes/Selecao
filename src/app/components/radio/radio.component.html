@@ -1,0 +1,8 @@
+<div class="input-group">
+  <div class="input-group-addon">
+    <span *ngFor="let item of options">
+      <input id="{{ item.label }}" (click)="registerOnChange(item.value)" type="radio" name="optradio"> <label for="{{ item.label }}">{{ item.label }}</label>
+    </span>
+  </div>
+  <input type="text" class="form-control" disabled="disabled" value="{{label}}">
+</div>
